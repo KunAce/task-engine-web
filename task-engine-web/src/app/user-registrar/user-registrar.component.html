@@ -1,0 +1,35 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" >
+  <label>
+    Username:
+    <input type="text" formControlName="username" required>
+  </label>
+
+  <label>
+    Real Name:
+    <input type="text" formControlName="realname" required>
+  </label>
+
+  <div class="gender">
+    <label>Gender:</label>
+      <input type="radio" name="gender" formControlName="gender" value="Male">Male
+      <input type="radio" name="gender" formControlName="gender" value="Female">Female
+      <input type="radio" name="gender" formControlName="gender" value="Unknown">Unknown
+  </div>
+
+  <label>
+    Email:
+    <input type="email" formControlName="email" required>
+  </label>
+
+  <label>
+    Password:
+    <input type="password" formControlName="password" required>
+  </label>
+
+  <label>
+    Re-type Password:
+    <input type="password" formControlName="retypepassword" required>
+  </label>
+
+  <button type="submit">Register</button>
+</form>
